@@ -285,7 +285,7 @@ Concrete consequences:
 
 ## AI tools used
 
-Claude (Anthropic) was used to help understand the assessment brief, clarify expectations, reason through the high-level architecture, and think through trade-offs around model capacity, label design, left/right sleeve handling, and the Fashionpedia-to-production domain gap. 
+Claude (Anthropic) was used to help understand the assessment brief, clarify expectations, reason through the high-level architecture, and think through trade-offs around model capacity, label design, left/right sleeve handling, the Fashionpedia-to-production domain gap, and quick experimental testing. 
 
 ## Deployment
 
