@@ -1,31 +1,31 @@
-# Training configuration. This exact file is saved inside every checkpoint
-# (see model/checkpoint.py) so any reported number can be traced back to
-# the hyperparameters that produced it.
+# Training configuration used for the submitted Kaggle run.
+# The exact config is also saved inside the checkpoint via model/checkpoint.py.
 
 seed: 42
 
-# Data paths -- ON KAGGLE, set these to /kaggle/input/... paths via a
-# separate configs/train_kaggle.yaml override (see README "Kaggle" section).
-# These defaults assume a local/cloned-repo layout.
+# Data paths are environment-specific. For reproduction, point these at the
+# Fashionpedia images/annotations described in README "Data source and licence".
 train_images_dir: "data/fashionpedia/train/images"
 train_annotations: "data/fashionpedia/train/annotations.json"
 val_images_dir: "data/fashionpedia/val/images"
 val_annotations: "data/fashionpedia/val/annotations.json"
 
 image_size: 256
-batch_size: 16
+batch_size: 32
 num_workers: 2
 
-epochs: 60
+epochs: 10
 lr: 0.0003
 weight_decay: 0.0001
 dice_weight: 0.5
 
-# Inverse-frequency class weights: [background, front_body, back_body, sleeve, collar]
-# Placeholder equal weighting -- replace with real values computed from
-# your training set via the class-weight utility in model/losses.py before
-# a real training run; collar and back_body are expected to need
-# significant upweighting given their underrepresentation.
-class_weights: [1.0, 1.0, 3.0, 1.0, 4.0]
+# Inverse-frequency class weights from the Kaggle run:
+# [background, front_body, back_body, sleeve, collar]
+class_weights:
+  - 0.24211359108068853
+  - 1.3850502447717574
+  - 143.4375888491857
+  - 7.105293007379598
+  - 143.4375888491857
 
 checkpoint_dir: "checkpoints"

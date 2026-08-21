@@ -285,18 +285,18 @@ Concrete consequences:
 
 ## AI tools used
 
-Claude (Anthropic) was used throughout this submission for: architecture
-design discussion and justification (frozen-encoder + separable-conv
-decoder trade-off reasoning, CoordConv rationale), the deterministic
-left/right connected-component postprocessing design, writing and testing
-`model/`, `predict.py`, `apply_fabric.py`, and `tests/` against a local
-PyTorch environment (parameter-budget verification, forward-pass shape
-checks, and the full `tests/` suite were run and passed before this
-submission), drafting this README and `DESIGN_NOTE.md`, and reviewing the
-Fashionpedia category-ID mapping logic. Dataset download, category-ID
+AI tools were used throughout this submission. Claude (Anthropic) was used for
+architecture design discussion and justification (frozen-encoder +
+separable-conv decoder trade-off reasoning, CoordConv rationale), the
+deterministic left/right connected-component postprocessing design, writing
+and testing `model/`, `predict.py`, `apply_fabric.py`, and `tests/` against a
+local PyTorch environment, drafting this README and `DESIGN_NOTE.md`, and
+reviewing the Fashionpedia category-ID mapping logic. OpenAI Codex was used
+for final repository preparation, validation, deployment scaffolding, README
+updates, Git hygiene, and push preparation. Dataset download, category-ID
 confirmation (`sleeve=31`, `collar=28`), and all actual model training were
-run independently on Kaggle. I can walk through any part of the code in
-detail on request.
+run independently on Kaggle. I can walk through any part of the code in detail
+on request.
 
 ## Deployment
 
