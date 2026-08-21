@@ -90,6 +90,6 @@ terraform plan
 The Kubeflow pipeline source is in `deployment/kubeflow/pipeline.py`. It compiles a validation pipeline that runs the CPU latency benchmark inside the service image.
 
 ```bash
-pip install kfp
+pip install -r requirements-kubeflow.txt
 python deployment/kubeflow/pipeline.py
 ```
