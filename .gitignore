@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local data and generated artifacts
+data/
+outputs/
+checkpoints/
+*.log
+
+# Include the trained assessment weights; ignore other ad-hoc checkpoints.
+weights/*.pt
+!weights/.gitkeep
+!weights/best.pt
+!weights/last.pt
+
+# Raw datasets, Kaggle exports, and starter archives are local-only.
+train2020/
+val_test2020/
+panel_seg_artifacts/
+panel_seg_artifacts.zip
+panel-seg-antigravity-starter.zip
+info_test2020.json
+instances_attributes_val2020.json
+ML-Engineer-Assessment 2.docx.pdf
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Docker / Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+*.tfvars
+!*.tfvars.example
+!.terraform.lock.hcl

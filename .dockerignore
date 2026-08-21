@@ -1,0 +1,14 @@
+.git
+.github
+.pytest_cache
+__pycache__
+*.pyc
+outputs
+checkpoints
+data
+*.log
+weights/*.pt
+!weights/.gitkeep
+.terraform
+*.tfstate
+*.tfvars

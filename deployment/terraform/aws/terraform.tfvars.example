@@ -1,0 +1,10 @@
+aws_region  = "us-east-1"
+project_name = "panel-seg"
+environment  = "dev"
+
+# Fill these from an existing EKS cluster if using IRSA.
+eks_oidc_provider_arn = ""
+eks_oidc_provider_url = ""
+
+kubernetes_namespace       = "panel-seg"
+kubernetes_service_account = "panel-seg-api"
